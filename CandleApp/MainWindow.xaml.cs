@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CandleApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,9 +24,17 @@ namespace CandleApp
     /// </remarks>
     public partial class MainWindow : Window
     {
+        private CandleTableData _dataTT;
+
         public MainWindow()
         {
+            _dataTT = new CandleTableData("MSFT");
+
             InitializeComponent();
+
+            tblCandles.ItemsSource = _dataTT.Items;
+
+            candleControl.SetData(_dataTT.Items);
         }
 
         private void CommonCommandBinding_CanExecute(object sender, CanExecuteRoutedEventArgs e)

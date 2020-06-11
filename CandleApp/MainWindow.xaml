@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CandleApp"
+        xmlns:ctrls="clr-namespace:CandleApp.Ctrls"
         mc:Ignorable="d"
-        Title="CandleView" Height="450" Width="800">
+        Title="CandleView" Height="600" Width="800">
 
     <Window.CommandBindings>
         <CommandBinding Command="New" CanExecute="CommonCommandBinding_CanExecute" />
@@ -22,11 +23,11 @@
 
         <ToolBarTray Grid.Row="0" Orientation="Horizontal" IsLocked="True">
             <ToolBar >
-                <Button Command="New" Content="New" />
-                <Button Command="Open" Content="Open" />
-                <Button Command="Save" Content="Save" />
+                <Button Command="New" Content="New" Visibility="Hidden" />
+                <Button Command="Open" Content="Open File" />
+                <Button Command="Save" Content="Save" Visibility="Hidden" />
             </ToolBar>
-            <ToolBar>
+            <ToolBar Visibility="Hidden">
                 <Button Command="Cut" Content="Cut" />
                 <Button Command="Copy" Content="Copy" />
                 <Button Command="Paste" Content="Paste" />
@@ -35,25 +36,22 @@
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="0" />
                 <ColumnDefinition Width="5" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="350" />
             </Grid.ColumnDefinitions>
             <TextBlock FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Left side</TextBlock>
             <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" />
 
-            <Grid Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="5" />
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <ctrls:CandleControl Grid.Column="2" x:Name="candleControl" />
 
-                <TextBlock Grid.Row="0" FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Candles</TextBlock>
-                <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" />
-                <TextBlock Grid.Row="3" FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Margin="0,44,0,0">Tables</TextBlock>
+            <GridSplitter Grid.Column="3" HorizontalAlignment="Stretch" />
 
-            </Grid>
+            <DataGrid Grid.Column="4"  x:Name="tblCandles" />
+            
+
         </Grid>
     </Grid>
 </Window>

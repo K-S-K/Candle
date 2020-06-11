@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="CandleApp.Ctrls.CandleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CandleApp.Ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name ="chartGrid">
+        <Canvas Margin="0" Background="White" x:Name ="chartCanvas" ClipToBounds="True">
+
+        </Canvas>
+
+        <!--<Canvas Height="200" Width="200" Background="White" >
+            <Canvas.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" />
+                    <TranslateTransform Y="200" />
+                </TransformGroup>
+            </Canvas.RenderTransform>
+            <Line X1="0" Y1="0" X2="100" Y2="100" Stroke="Black" StrokeThickness="2" />
+        </Canvas>-->
+        
+        <!--<TextBlock Grid.Row="0" FontSize="55" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap">Candles</TextBlock>-->
+
+    </Grid>
+</UserControl>
