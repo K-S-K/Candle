@@ -24,7 +24,7 @@
         <ToolBarTray Grid.Row="0" Orientation="Horizontal" IsLocked="True">
             <ToolBar >
                 <Button Command="New" Content="New" Visibility="Hidden" />
-                <Button Command="Open" Content="Open File" />
+                <Button Command="Open" Content="Open File" Visibility="Hidden" />
                 <Button Command="Save" Content="Save" Visibility="Hidden" />
             </ToolBar>
             <ToolBar Visibility="Hidden">

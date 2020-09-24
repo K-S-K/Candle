@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CandleApp", "CandleApp\CandleApp.csproj", "{35F776E6-4FE0-41E0-8A0B-F43BA4ADF7DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candle.Test", "Candle.Test\Candle.Test.csproj", "{F8C05849-FED0-460B-A4C4-253C953ABF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candle.Test", "Candle.Test\Candle.Test.csproj", "{F8C05849-FED0-460B-A4C4-253C953ABF6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{5DFFB1D4-C9DA-47FD-9013-0ECDFF7A256B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
